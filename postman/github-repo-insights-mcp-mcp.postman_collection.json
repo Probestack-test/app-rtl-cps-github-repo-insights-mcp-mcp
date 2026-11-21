@@ -1,0 +1,224 @@
+{
+  "info" : {
+    "name" : "Git Repo Insights",
+    "description" : "Generated MCP 2026-07-28 Streamable HTTP requests for github-repo-insights-mcp-mcp. Set baseUrl (and apiKey/accessToken, if this server requires one) as collection variables before running these.",
+    "schema" : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable" : [ {
+    "key" : "baseUrl",
+    "value" : "https://replace-with-deployed-host",
+    "description" : "The deployed server's base URL."
+  }, {
+    "key" : "mcpPath",
+    "value" : "/mcp",
+    "description" : "The MCP endpoint path."
+  } ],
+  "item" : [ {
+    "name" : "server/discover",
+    "request" : {
+      "method" : "POST",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json"
+      }, {
+        "key" : "Accept",
+        "value" : "application/json, text/event-stream"
+      }, {
+        "key" : "MCP-Protocol-Version",
+        "value" : "2026-07-28"
+      }, {
+        "key" : "Mcp-Method",
+        "value" : "server/discover"
+      } ],
+      "url" : {
+        "raw" : "{{baseUrl}}{{mcpPath}}",
+        "host" : [ "{{baseUrl}}" ],
+        "path" : [ "{{mcpPath}}" ]
+      },
+      "body" : {
+        "mode" : "raw",
+        "raw" : "{\n  \"jsonrpc\" : \"2.0\",\n  \"id\" : 1,\n  \"method\" : \"server/discover\",\n  \"params\" : {\n    \"_meta\" : {\n      \"io.modelcontextprotocol/protocolVersion\" : \"2026-07-28\",\n      \"io.modelcontextprotocol/clientInfo\" : {\n        \"name\" : \"postman\",\n        \"version\" : \"1.0.0\"\n      },\n      \"io.modelcontextprotocol/clientCapabilities\" : { }\n    }\n  }\n}",
+        "options" : {
+          "raw" : {
+            "language" : "json"
+          }
+        }
+      }
+    }
+  }, {
+    "name" : "tools/call get_repository_details",
+    "request" : {
+      "method" : "POST",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json"
+      }, {
+        "key" : "Accept",
+        "value" : "application/json, text/event-stream"
+      }, {
+        "key" : "MCP-Protocol-Version",
+        "value" : "2026-07-28"
+      }, {
+        "key" : "Mcp-Method",
+        "value" : "tools/call"
+      }, {
+        "key" : "Mcp-Name",
+        "value" : "get_repository_details"
+      } ],
+      "url" : {
+        "raw" : "{{baseUrl}}{{mcpPath}}",
+        "host" : [ "{{baseUrl}}" ],
+        "path" : [ "{{mcpPath}}" ]
+      },
+      "body" : {
+        "mode" : "raw",
+        "raw" : "{\n  \"jsonrpc\" : \"2.0\",\n  \"id\" : 1,\n  \"method\" : \"tools/call\",\n  \"params\" : {\n    \"name\" : \"get_repository_details\",\n    \"arguments\" : {\n      \"owner\" : \"string\",\n      \"repo\" : \"string\"\n    },\n    \"_meta\" : {\n      \"io.modelcontextprotocol/protocolVersion\" : \"2026-07-28\",\n      \"io.modelcontextprotocol/clientInfo\" : {\n        \"name\" : \"postman\",\n        \"version\" : \"1.0.0\"\n      },\n      \"io.modelcontextprotocol/clientCapabilities\" : { }\n    }\n  }\n}",
+        "options" : {
+          "raw" : {
+            "language" : "json"
+          }
+        }
+      }
+    }
+  }, {
+    "name" : "tools/call get_repository_languages",
+    "request" : {
+      "method" : "POST",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json"
+      }, {
+        "key" : "Accept",
+        "value" : "application/json, text/event-stream"
+      }, {
+        "key" : "MCP-Protocol-Version",
+        "value" : "2026-07-28"
+      }, {
+        "key" : "Mcp-Method",
+        "value" : "tools/call"
+      }, {
+        "key" : "Mcp-Name",
+        "value" : "get_repository_languages"
+      } ],
+      "url" : {
+        "raw" : "{{baseUrl}}{{mcpPath}}",
+        "host" : [ "{{baseUrl}}" ],
+        "path" : [ "{{mcpPath}}" ]
+      },
+      "body" : {
+        "mode" : "raw",
+        "raw" : "{\n  \"jsonrpc\" : \"2.0\",\n  \"id\" : 1,\n  \"method\" : \"tools/call\",\n  \"params\" : {\n    \"name\" : \"get_repository_languages\",\n    \"arguments\" : {\n      \"owner\" : \"string\",\n      \"repo\" : \"string\"\n    },\n    \"_meta\" : {\n      \"io.modelcontextprotocol/protocolVersion\" : \"2026-07-28\",\n      \"io.modelcontextprotocol/clientInfo\" : {\n        \"name\" : \"postman\",\n        \"version\" : \"1.0.0\"\n      },\n      \"io.modelcontextprotocol/clientCapabilities\" : { }\n    }\n  }\n}",
+        "options" : {
+          "raw" : {
+            "language" : "json"
+          }
+        }
+      }
+    }
+  }, {
+    "name" : "tools/call get_repository_contributors",
+    "request" : {
+      "method" : "POST",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json"
+      }, {
+        "key" : "Accept",
+        "value" : "application/json, text/event-stream"
+      }, {
+        "key" : "MCP-Protocol-Version",
+        "value" : "2026-07-28"
+      }, {
+        "key" : "Mcp-Method",
+        "value" : "tools/call"
+      }, {
+        "key" : "Mcp-Name",
+        "value" : "get_repository_contributors"
+      } ],
+      "url" : {
+        "raw" : "{{baseUrl}}{{mcpPath}}",
+        "host" : [ "{{baseUrl}}" ],
+        "path" : [ "{{mcpPath}}" ]
+      },
+      "body" : {
+        "mode" : "raw",
+        "raw" : "{\n  \"jsonrpc\" : \"2.0\",\n  \"id\" : 1,\n  \"method\" : \"tools/call\",\n  \"params\" : {\n    \"name\" : \"get_repository_contributors\",\n    \"arguments\" : {\n      \"owner\" : \"string\",\n      \"repo\" : \"string\",\n      \"per_page\" : 10\n    },\n    \"_meta\" : {\n      \"io.modelcontextprotocol/protocolVersion\" : \"2026-07-28\",\n      \"io.modelcontextprotocol/clientInfo\" : {\n        \"name\" : \"postman\",\n        \"version\" : \"1.0.0\"\n      },\n      \"io.modelcontextprotocol/clientCapabilities\" : { }\n    }\n  }\n}",
+        "options" : {
+          "raw" : {
+            "language" : "json"
+          }
+        }
+      }
+    }
+  }, {
+    "name" : "resources/read docs://usage-guide",
+    "request" : {
+      "method" : "POST",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json"
+      }, {
+        "key" : "Accept",
+        "value" : "application/json, text/event-stream"
+      }, {
+        "key" : "MCP-Protocol-Version",
+        "value" : "2026-07-28"
+      }, {
+        "key" : "Mcp-Method",
+        "value" : "resources/read"
+      }, {
+        "key" : "Mcp-Name",
+        "value" : "docs://usage-guide"
+      } ],
+      "url" : {
+        "raw" : "{{baseUrl}}{{mcpPath}}",
+        "host" : [ "{{baseUrl}}" ],
+        "path" : [ "{{mcpPath}}" ]
+      },
+      "body" : {
+        "mode" : "raw",
+        "raw" : "{\n  \"jsonrpc\" : \"2.0\",\n  \"id\" : 1,\n  \"method\" : \"resources/read\",\n  \"params\" : {\n    \"uri\" : \"docs://usage-guide\",\n    \"_meta\" : {\n      \"io.modelcontextprotocol/protocolVersion\" : \"2026-07-28\",\n      \"io.modelcontextprotocol/clientInfo\" : {\n        \"name\" : \"postman\",\n        \"version\" : \"1.0.0\"\n      },\n      \"io.modelcontextprotocol/clientCapabilities\" : { }\n    }\n  }\n}",
+        "options" : {
+          "raw" : {
+            "language" : "json"
+          }
+        }
+      }
+    }
+  }, {
+    "name" : "prompts/get summarize_repository",
+    "request" : {
+      "method" : "POST",
+      "header" : [ {
+        "key" : "Content-Type",
+        "value" : "application/json"
+      }, {
+        "key" : "Accept",
+        "value" : "application/json, text/event-stream"
+      }, {
+        "key" : "MCP-Protocol-Version",
+        "value" : "2026-07-28"
+      }, {
+        "key" : "Mcp-Method",
+        "value" : "prompts/get"
+      }, {
+        "key" : "Mcp-Name",
+        "value" : "summarize_repository"
+      } ],
+      "url" : {
+        "raw" : "{{baseUrl}}{{mcpPath}}",
+        "host" : [ "{{baseUrl}}" ],
+        "path" : [ "{{mcpPath}}" ]
+      },
+      "body" : {
+        "mode" : "raw",
+        "raw" : "{\n  \"jsonrpc\" : \"2.0\",\n  \"id\" : 1,\n  \"method\" : \"prompts/get\",\n  \"params\" : {\n    \"name\" : \"summarize_repository\",\n    \"arguments\" : {\n      \"owner\" : \"example\",\n      \"repo\" : \"example\"\n    },\n    \"_meta\" : {\n      \"io.modelcontextprotocol/protocolVersion\" : \"2026-07-28\",\n      \"io.modelcontextprotocol/clientInfo\" : {\n        \"name\" : \"postman\",\n        \"version\" : \"1.0.0\"\n      },\n      \"io.modelcontextprotocol/clientCapabilities\" : { }\n    }\n  }\n}",
+        "options" : {
+          "raw" : {
+            "language" : "json"
+          }
+        }
+      }
+    }
+  } ]
+}
